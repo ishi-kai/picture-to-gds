@@ -15,26 +15,34 @@ This is a simple script for generating GDSII layout files from image files. The 
 - gdspy
 
 
+## Setup for Ubuntu24.04
+```
+$ sudo apt install python3
+$ sudo apt install python3-opencv
+$ pip3 install gdspy --break-system-packages
+$ pip3 install 'numpy<2' --break-system-packages
+```
+
 ## Usage
 ```
-$ python picToGDS.py [-h] [--scale SCALE] [-d] fileName sizeOfTheCell layerNum
+$ python3 picToGDS.py [-h] [--scale SCALE] [-d] fileName sizeOfTheCell layerNum
 ```
 
 ## Example
 ```
-$ python picToGDS.py test.jpg 0.6 4
+$ python3 picToGDS.py test.jpg 0.6 4
 ```
 ![example1](document/fig1.jpg "example1")
 
 ```
 # Floyd–Steinberg dithering
-$ python picToGDS.py -d test.jpg 0.6 4
+$ python3 picToGDS.py -d test.jpg 0.6 4
 ```
 ![example2](document/fig2.jpg "example2")
 
 ```
 # Scaling
-$ python picToGDS.py --scale 2.0 -d test.png 1.0 2
+$ python3 picToGDS.py --scale 2.0 -d test.png 1.0 2
 ```
 ![example3](document/fig3.jpg "example3")
 
